@@ -31,12 +31,12 @@ public class BalanceCommandTest {
         MetroCard metroCard = new MetroCard("MC1", 600); // Assuming MetroCard constructor
         String[] tokens = {"BALANCE", "MC1", "600"};
         
-        when(metroCardServiceMock.balance("MC1", 600)).thenReturn(metroCard);
+        when(metroCardServiceMock.save("MC1", 600)).thenReturn(metroCard);
 
         // Act
         balanceCommand.invoke(tokens);
 
         // Assert
-        verify(metroCardServiceMock, times(1)).balance("MC1", 600);
+        verify(metroCardServiceMock, times(1)).save("MC1", 600);
     }
 }

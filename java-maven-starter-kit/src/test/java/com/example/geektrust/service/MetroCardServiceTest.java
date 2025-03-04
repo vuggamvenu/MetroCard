@@ -38,7 +38,7 @@ public class MetroCardServiceTest {
         when(metroRepositoryMock.save(any(MetroCard.class))).thenReturn(expectedMetroCard);
 
         // Act
-        MetroCard result = metroCardService.balance(cardNumber, balanceAmount);
+        MetroCard result = metroCardService.save(cardNumber, balanceAmount);
 
         // Assert
         assertEquals(expectedMetroCard, result);
@@ -56,7 +56,7 @@ public class MetroCardServiceTest {
 
         // Act & Assert
         Exception exception = assertThrows(RuntimeException.class, () -> {
-            metroCardService.balance(cardNumber, balanceAmount);
+            metroCardService.save(cardNumber, balanceAmount);
         });
 
         assertEquals("Database error", exception.getMessage());
@@ -74,7 +74,7 @@ public class MetroCardServiceTest {
         when(metroRepositoryMock.save(any(MetroCard.class))).thenReturn(expectedMetroCard);
 
         // Act
-        MetroCard result = metroCardService.balance(cardNumber, balanceAmount);
+        MetroCard result = metroCardService.save(cardNumber, balanceAmount);
 
         // Assert
         assertEquals(expectedMetroCard, result);
@@ -92,7 +92,7 @@ public class MetroCardServiceTest {
         when(metroRepositoryMock.save(any(MetroCard.class))).thenReturn(expectedMetroCard);
 
         // Act
-        MetroCard result = metroCardService.balance(cardNumber, balanceAmount);
+        MetroCard result = metroCardService.save(cardNumber, balanceAmount);
 
         // Assert
         assertEquals(expectedMetroCard, result);

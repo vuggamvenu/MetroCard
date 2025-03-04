@@ -12,9 +12,11 @@ public class BalanceCommand implements ICommand{
 
 	@Override
 	public void invoke(String[] tokens) {
-		String metroCardNumber = tokens[1];
-		String balance = tokens[2];
-		metroCardService.balance(metroCardNumber,Integer.parseInt(balance));
+		int cardIndex = 1;
+		int balanceIndex = 2;
+		String metroCardNumber = tokens[cardIndex];
+		String balance = tokens[balanceIndex];
+		metroCardService.save(metroCardNumber,Integer.parseInt(balance));
 	}
 
 }

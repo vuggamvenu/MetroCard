@@ -8,7 +8,7 @@ public interface IStationRepository {
 
 	Station findByStation(String station);
 
-	void save(Station stationNewBean);
+	Station save(Station stationNewBean);
 
 	List<Station> findAll();
 

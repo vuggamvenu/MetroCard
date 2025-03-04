@@ -17,8 +17,9 @@ public class StationRepository implements IStationRepository{
 	}
 
 	@Override
-	public void save(Station station) {
+	public Station save(Station station) {
 		storage.put(station.getStation(), station);
+		return storage.get(station.getStation());
 	}
 
 	@Override

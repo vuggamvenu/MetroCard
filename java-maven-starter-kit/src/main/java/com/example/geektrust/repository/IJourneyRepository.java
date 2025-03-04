@@ -4,7 +4,7 @@ import com.example.geektrust.Entities.Journey;
 
 public interface IJourneyRepository {
 
-	Journey isReturnJourney(Journey journey);
+	Journey isReturnJourney(String metroCardNumber);
 
 	void save(Journey journey);
 

@@ -10,8 +10,8 @@ public class JourneyRepository implements IJourneyRepository{
 	private final Map<String, Journey> storage = new HashMap<>();
 	
 	@Override
-	public Journey isReturnJourney(Journey journey) {
-		return storage.get(journey.getMetroCardNumber());
+	public Journey isReturnJourney(String metroCardNumber) {
+		return storage.get(metroCardNumber);
 	}
 
 	@Override
